@@ -2,7 +2,6 @@
 
 A Telegram bot written in Golang that:
 - Fetches English quotes from [ZenQuotes.io](https://zenquotes.io/keywords/love)
-- Translates them to Persian using [LibreTranslate](https://libretranslate.com)
 - Sends them automatically in your group
 - Admin and group auto-detected at first use
 - Admin can control interval via commands
