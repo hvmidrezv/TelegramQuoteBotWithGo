@@ -1,0 +1,36 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Test binary, coverage reports, and logs
+*.test
+*.out
+*.log
+.env
+# Dependency directories
+vendor/
+
+# Go build artifacts
+*.o
+*.a
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_main.c
+_cgo_export.*
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# GoLand specific
+*.goos
+*.goarch
