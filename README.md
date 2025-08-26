@@ -1,21 +1,81 @@
-# Telegram Quote Bot 🇬🇧➡️🇮🇷
+# 🧠 Telegram Quote Bot
+![photo_2025-08-24_00-10-19](https://github.com/user-attachments/assets/a53c4626-1734-43ad-bf4b-a44da526c678)
 
-A Telegram bot written in Golang that:
-- Fetches English quotes from [ZenQuotes.io](https://zenquotes.io/keywords/love)
-- Sends them automatically in your group
-- Admin and group auto-detected at first use
-- Admin can control interval via commands
+A **Telegram bot** built with **Go** that sends **inspirational quotes** to Telegram groups at scheduled intervals. Ideal for community groups, productivity teams, or anyone who loves daily motivation.
 
-## 🔧 Setup
+---
 
-1. Copy `.env.example` to `.env` and set your Telegram bot token.
-2. Run the bot:
+## ✨ Features
 
-```bash
-go run main.go
-```
+- 🔁 **Scheduled Quotes**: Automatically delivers quotes to registered groups.
+- 📚 **Powered by [ZenQuotes API](https://zenquotes.io/)**: Random inspirational quotes every time.
+- 🛠️ **Admin Tools**:
+    - `/setinterval <minutes>` – Set custom delivery intervals.
+    - `/now` – Instantly send a quote.
+- 🎨 **HTML-formatted Messages**: With time-based visual themes.
 
-## 🛠️ Commands
+---
 
-- `/setinterval <minutes>` – Set the interval between quotes (admin only)
-- `/now` – Send a quote immediately (admin only)
+## 🚀 Installation
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/telegram-quote-bot.git
+   cd telegram-quote-bot
+   ```
+
+2. **Install Dependencies**
+   ```bash
+   go mod tidy
+   ```
+
+3. **Setup Environment Variables**
+
+   Create a `.env` file in the root directory:
+   ```env
+   BOT_TOKEN=your_telegram_bot_token
+   ```
+
+4. **Run the Bot**
+   ```bash
+   go run cmd/bot/main.go
+   ```
+
+---
+
+## ⚙️ Commands
+
+- `/setinterval <minutes>` – Set quote delivery interval for the current group.
+- `/now` – Send a quote immediately.
+
+---
+
+## 🧩 Configuration
+
+The bot uses a `config.json` file to persist:
+
+- ✅ Admin user ID
+- 🧑‍🤝‍🧑 Registered group IDs
+- ⏱️ Delivery intervals
+
+> This file is created and updated automatically as the bot runs.
+
+---
+
+## 📦 Dependencies
+
+- [Go Telegram Bot API](https://github.com/go-telegram-bot-api/telegram-bot-api)
+- [GoCron](https://github.com/go-co-op/gocron)
+- [godotenv](https://github.com/joho/godotenv)
+
+---
+
+## 🌐 API Used
+
+- [ZenQuotes API](https://zenquotes.io/) – for motivational quote content.
+
+---
+
+## 📄 License
+
+Licensed under the [MIT License](LICENSE).
